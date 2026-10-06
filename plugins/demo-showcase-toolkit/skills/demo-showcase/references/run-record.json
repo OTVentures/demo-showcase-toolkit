@@ -1,0 +1,23 @@
+{
+  "schema": "demo-showcase-run/1",
+  "run_id": "generated-once-by-showcase_run.py",
+  "plan_identity": {
+    "brief": {"title": null, "slug": null},
+    "source_ids": [],
+    "source_video_ids": []
+  },
+  "plan_fingerprint": "sha256-of-brief-and-source-selection",
+  "phase": "drafting",
+  "events": [],
+  "pending_operation": null,
+  "checks": {
+    "originals_unchanged": null,
+    "metadata_verified": null,
+    "media_bytes_verified": false,
+    "caption_text_verified": false,
+    "public_page_membership_verified": false,
+    "desktop_playback_verified": false,
+    "tablet_layout_verified": false
+  },
+  "blockers": []
+}

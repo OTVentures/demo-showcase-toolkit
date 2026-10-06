@@ -1,0 +1,26 @@
+{
+  "name": "demo-showcase-toolkit",
+  "version": "1.0.1",
+  "description": "Create Demo Match client showcases by copying selected demos while preserving the source library.",
+  "author": {
+    "name": "Ian Hilgendorff"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Demo Showcase Toolkit",
+    "shortDescription": "Describe a showcase and copy your selected demos.",
+    "longDescription": "Create event, booth and audience showcases by describing the page and selecting demos. Copies records, hosted videos and captions through Demo Match, preserves the original library, and verifies publication. Requires an authorized Demo Match account. PDF imports and external players need per-showcase verification.",
+    "developerName": "Ian Hilgendorff",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create a private showcase from the demos I select.",
+      "Plan OpenText World 2026 Demos using an agreed flagship list.",
+      "Resume my showcase and check that the originals are unchanged."
+    ]
+  },
+  "mcpServers": "./.mcp.json"
+}

@@ -1,0 +1,20 @@
+{
+  "name": "otventures-demo-showcase",
+  "interface": {
+    "displayName": "Otventures Demo Showcase"
+  },
+  "plugins": [
+    {
+      "name": "demo-showcase-toolkit",
+      "source": {
+        "source": "local",
+        "path": "./plugins/demo-showcase-toolkit"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

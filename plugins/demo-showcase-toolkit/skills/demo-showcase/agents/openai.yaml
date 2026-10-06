@@ -1,0 +1,13 @@
+interface:
+  display_name: "Demo Showcase"
+  short_description: "Copy selected demos into a private event showcase"
+  default_prompt: "Use $demo-showcase to create a private showcase from my selected demos while preserving the originals."
+dependencies:
+  tools:
+    - type: "mcp"
+      value: "demo-match"
+      description: "Demo Match client showcases, demos and media"
+      transport: "streamable_http"
+      url: "https://demos.otventures.vc/mcp"
+policy:
+  allow_implicit_invocation: true

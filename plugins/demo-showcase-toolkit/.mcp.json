@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "demo-match": {
+      "type": "http",
+      "url": "https://demos.otventures.vc/mcp"
+    }
+  }
+}
