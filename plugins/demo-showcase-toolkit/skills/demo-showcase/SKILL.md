@@ -13,7 +13,13 @@ The required method is **create a private showcase and copy the demos**. Create 
 
 Private means unlisted from the main catalogue: published copies and their client page are accessible by link. Explain this once before creating a showcase; if the user requires password protection, resolve that mismatch first. The interactive application URL remains a link to the existing application; the toolkit does not clone application deployments.
 
-Version 1.0 has passed live hosted-video copy, caption, publication and playback checks on Codex desktop. Existing live sources can still fail new-copy caption requirements. PDF imports and external players require per-showcase verification. Do not promise completion until every copy passes live readiness and the public page is checked.
+The workflow has passed live hosted-video copy, caption, publication and playback checks on Codex desktop. Claude Code loads the same skill, scripts and remote MCP through its own plugin manifest. See the published validation report for host-specific test evidence. Existing live sources can still fail new-copy caption requirements. PDF imports and external players require per-showcase verification. Do not promise completion until every copy passes live readiness and the public page is checked.
+
+## Host setup
+
+In Claude Code the skill is invoked as `/demo-showcase-toolkit:demo-showcase`, or through a plain-language request. Use `/mcp` for the plugin's Demo Match connection and the host's normal OAuth sign-in when required. Do not copy credentials from another assistant or bypass tool permission prompts. In Codex, use the installed skill and approved connector. Tool name prefixes can differ; discover current schemas by operation name.
+
+Resolve the bundled scripts relative to this loaded SKILL.md file; never assume the user's working directory is the plugin root. Keep briefs, run records and downloaded media in the task's writable working directory, outside the plugin cache and repository. Check Python 3.9+ and curl before media work. A browser tool is needed for automated page/playback QA; if the host lacks one, report the check as unverified and provide the exact manual checks. Browser QA is not implied by successful metadata checks.
 
 ## 1. Understand and resolve
 

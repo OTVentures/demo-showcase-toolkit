@@ -1,5 +1,12 @@
 # Changelog
 
+## 1.1.0
+
+- Claude Code plugin manifest and marketplace entry alongside the existing Codex packaging.
+- Shared skill and MCP connection with host-specific setup and marketer instructions.
+- Release checks keep both manifests and marketplace entries consistent.
+- Claude Code manifest validation included in CI.
+
 ## 1.0.1
 
 - Public reusable distribution for the OTVentures organization.

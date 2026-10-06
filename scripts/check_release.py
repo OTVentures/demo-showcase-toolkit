@@ -12,6 +12,17 @@ def check():
     manifest = json.loads((PLUGIN / ".codex-plugin/plugin.json").read_text())
     marketplace = json.loads((ROOT / ".agents/plugins/marketplace.json").read_text())
     connector = json.loads((PLUGIN / ".mcp.json").read_text())
+    claude_manifest = json.loads((PLUGIN / ".claude-plugin/plugin.json").read_text())
+    claude_marketplace = json.loads((ROOT / ".claude-plugin/marketplace.json").read_text())
+    assert claude_manifest["name"] == manifest["name"]
+    assert claude_manifest["version"] == manifest["version"]
+    assert claude_manifest["license"] == "MIT"
+    assert claude_marketplace["name"] == marketplace["name"]
+    assert claude_marketplace["owner"]["name"] == "OTVentures"
+    assert len(claude_marketplace["plugins"]) == 1
+    claude_entry = claude_marketplace["plugins"][0]
+    assert claude_entry["name"] == manifest["name"]
+    assert claude_entry["source"] == "./plugins/demo-showcase-toolkit"
     assert manifest["name"] == PLUGIN.name
     assert re.fullmatch(r"\d+\.\d+\.\d+", manifest["version"]), "release needs stable version"
     assert manifest["skills"] == "./skills/"

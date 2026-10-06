@@ -1,5 +1,13 @@
 # Validation and known limitations
 
+## Claude Code support in 1.1.0
+
+Claude Code 2.1.280 validated the plugin and marketplace with `--strict` and no warnings. Installation into an isolated test workspace succeeded; the installed component inventory showed one `demo-showcase` skill and one `demo-match` MCP server. The host's existing Demo Match MCP connection reported connected. The shared local suite still passes 25 tests; CI also validates the Claude manifests on macOS and Linux.
+
+A live model-driven Claude test could not start because the saved Claude login returned an expired OAuth session that could not refresh. This is separate from Demo Match authentication. No new showcase was created by that failed test, and this release does not claim a completed end-to-end Claude copy run. Sign in to Claude Code with `/login` and run the bounded first-showcase test in the Claude Code guide to establish that evidence. The existing live copy evidence below was obtained through Codex.
+
+Claude Cowork and ordinary web chat are not tested execution hosts for this toolkit.
+
 Initial live validation on 2026-10-06 used an authorized account on Codex desktop/macOS. Private client URLs, real record IDs, local paths and operator data are intentionally omitted from this public report.
 
 ## Evidence

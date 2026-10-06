@@ -20,4 +20,8 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python scripts/check_release.py
+      - name: Validate Claude Code plugin and marketplace
+        run: |
+          npx --yes --package @anthropic-ai/claude-code@2.1.280 claude plugin validate . --strict
+          npx --yes --package @anthropic-ai/claude-code@2.1.280 claude plugin validate plugins/demo-showcase-toolkit --strict
       - run: python scripts/package_release.py

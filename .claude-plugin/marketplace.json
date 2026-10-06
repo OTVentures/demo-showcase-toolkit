@@ -1,0 +1,12 @@
+{
+  "name": "otventures-demo-showcase",
+  "description": "Tools for creating verified Demo Match showcases with independent demo copies.",
+  "owner": { "name": "OTVentures" },
+  "plugins": [
+    {
+      "name": "demo-showcase-toolkit",
+      "source": "./plugins/demo-showcase-toolkit",
+      "description": "Create Demo Match showcases by copying selected demos and preserving the originals."
+    }
+  ]
+}

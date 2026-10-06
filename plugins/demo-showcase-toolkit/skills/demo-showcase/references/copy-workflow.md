@@ -68,6 +68,8 @@ For each source video in its delivered sequence:
 
 `upload_video.py` accepts one or more local video paths and one JSON contract line per file on stdin. Wait for its ready message before feeding a terminal session; it disables echo and canonical input to accept long signed URLs without truncation. Pass only the exact `upload` object and `size_bytes` from the MCP response. Do not put the contract in shell arguments or a disk file. It requires Python 3 and curl on the desktop host.
 
+Claude Code's Bash tool can supply stdin with a single-quoted heredoc delimiter. Feed the exact JSON line directly to the helper; never interpolate it with shell variables, command substitution, an unquoted heredoc or `echo`. This is a shell input body, not a curl command-line argument or a saved file. Tool request/response history may still contain the temporary capability returned by MCP: keep that history private and exclude it from exports and reports. Do not claim the host never retains sensitive tool input. The helper prints only status, byte count and checksum.
+
 If PUT fails, read the destination and ask `complete_video_upload` to reconcile the prepared transfer. If it reports `upload_not_found`, prepare a fresh upload for the SAME destination video and retry the local bytes. The live validation recovered this exact failure without a second video record. Never treat a failed upload as a reason to call `add_video` again.
 
 For genuinely external video providers, copy the original `external_url` into a new video record. The provider remains a dependency; don't promise independent hosted bytes. Verify supported playback and preserve its narration language.

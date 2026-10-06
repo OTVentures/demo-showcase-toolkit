@@ -5,12 +5,12 @@ ROOT = Path(__file__).resolve().parents[1]
 PLUGIN = ROOT / "plugins" / "demo-showcase-toolkit"
 ROOT_FILES = (
     "README.md", "LICENSE", "CONTRIBUTING.md", "SECURITY.md", "CHANGELOG.md",
-    ".gitignore", ".agents/plugins/marketplace.json", ".github/workflows/validate.yml",
-    "docs/INSTALL.md", "docs/VALIDATION.md", "scripts/release_files.py",
+    ".gitignore", ".agents/plugins/marketplace.json", ".claude-plugin/marketplace.json", ".github/workflows/validate.yml",
+    "docs/INSTALL.md", "docs/CLAUDE-CODE.md", "docs/VALIDATION.md", "scripts/release_files.py",
     "scripts/check_release.py", "scripts/package_release.py",
 )
 PLUGIN_FILES = (
-    ".codex-plugin/plugin.json", ".mcp.json", "LICENSE", "README.md",
+    ".codex-plugin/plugin.json", ".claude-plugin/plugin.json", ".mcp.json", "LICENSE", "README.md",
     "examples/showcase-brief.json", "skills/demo-showcase/SKILL.md",
     "skills/demo-showcase/agents/openai.yaml",
     "skills/demo-showcase/references/copy-workflow.md",

@@ -1,5 +1,7 @@
 # Installation
 
+**Claude Code users:** use [the Claude Code guide](CLAUDE-CODE.md). The instructions below are for Codex.
+
 ## Marketer setup
 
 Ask Codex desktop to install the toolkit from this repository, then sign in to Demo Match with your own approved account if prompted. Start a new task to load the plugin. The assistant can check local prerequisites and explain any account permission gap; no coding is required from the marketer.
@@ -13,7 +15,7 @@ Client creation requires settings authority; demo and media copying require appr
 With a recent Codex CLI installed:
 
 ```sh
-codex plugin marketplace add OTVentures/demo-showcase-toolkit --ref v1.0.1
+codex plugin marketplace add OTVentures/demo-showcase-toolkit --ref v1.1.0
 codex plugin add demo-showcase-toolkit@otventures-demo-showcase
 ```
 
@@ -28,7 +30,7 @@ Download and extract the versioned archive from [GitHub Releases](https://github
 For the installing assistant:
 
 ```sh
-codex plugin marketplace add /absolute/path/to/extracted/demo-showcase-toolkit-1.0.1
+codex plugin marketplace add /absolute/path/to/extracted/demo-showcase-toolkit-1.1.0
 codex plugin add demo-showcase-toolkit@otventures-demo-showcase
 ```
 

@@ -6,11 +6,20 @@ Create a Demo Match showcase by describing the event or audience and choosing ex
 
 ## Install and start
 
-In Codex desktop, ask:
+For **Claude Code**, follow the [Claude Code setup guide](docs/CLAUDE-CODE.md), or enter:
+
+```text
+/plugin marketplace add OTVentures/demo-showcase-toolkit
+/plugin install demo-showcase-toolkit@otventures-demo-showcase
+```
+
+Start a new session and use `/mcp` to sign in if prompted. Invoke `/demo-showcase-toolkit:demo-showcase` or describe the showcase in plain language.
+
+For **Codex desktop**, ask:
 
 > Install the Demo Showcase Toolkit from https://github.com/OTVentures/demo-showcase-toolkit. Use my existing approved Demo Match connection if available; otherwise guide me through signing in with my own account.
 
-Start a new task after installation. If the plugin does not appear, restart the desktop app. Then ask:
+Start a new session/task after installation. If the plugin does not appear, restart the host. In either assistant, ask:
 
 > Use Demo Showcase to create a showcase called “Conference Demos”. Copy these demos: [paste the exact demo links]. Use the standard branding, include all videos and captions, preserve the originals, and give me the verified published link. If the title already exists, ask before reusing it.
 
@@ -20,7 +29,7 @@ See the [installation guide](docs/INSTALL.md) for account requirements, CLI inst
 
 ## Requirements
 
-- Codex desktop with plugin, MCP and local command support; an appropriate Codex account/plan.
+- Claude Code or Codex desktop with plugin, MCP and local command support, plus an appropriate account/plan for that assistant. Claude Cowork and ordinary browser chat are not validated by this release.
 - Your own approved Demo Match account with client creation and demo/media publishing permissions. Downloading this repository does not grant access.
 - Python 3.9+ and curl for the local upload helper. No third-party Python packages are required. Live workflow validation used macOS; helper tests also run on Linux in CI. Native Windows and cloud-only chat execution are not validated.
 - Network access to Demo Match and the upload destination returned by its authenticated connector, plus enough local disk space for the selected videos.
@@ -50,7 +59,7 @@ python3 scripts/check_release.py
 python3 scripts/package_release.py
 ```
 
-The first command validates the package, scans for common accidental private artifacts and runs the local tests without credentials or network calls. The second creates an allowlisted ZIP and SHA-256 checksum in `dist/`. CI runs the checks on macOS and Linux.
+The first command validates the package, scans for common accidental private artifacts and runs the local tests without credentials or network calls. The second creates an allowlisted ZIP and SHA-256 checksum in `dist/`. CI runs the checks on macOS and Linux, including Claude manifest validation.
 
 - [Plugin workflow](plugins/demo-showcase-toolkit/skills/demo-showcase/SKILL.md)
 - [Copy and recovery contract](plugins/demo-showcase-toolkit/skills/demo-showcase/references/copy-workflow.md)
